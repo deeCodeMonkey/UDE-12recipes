@@ -6,6 +6,8 @@
     mysql = require('mysql'),
     app = express();
 
+var PORT = process.env.PORT || 8080;
+
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -82,7 +84,7 @@ app.post('/edit', (req, res) => {
     });
 });
 
-var PORT = process.env.PORT || 3000;
+
 
 app.listen(PORT, () => {
     console.log('Server started ' + PORT);
