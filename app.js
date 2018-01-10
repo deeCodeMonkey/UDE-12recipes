@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "dee139139",
+    password: "1234",
     database: "recipe_db"
 });
 
@@ -78,8 +78,8 @@ app.post('/edit', (req, res) => {
     });
 });
 
+var PORT = process.env.PORT || 3000;
 
-
-app.listen(3000, ()=>{
-    console.log('Server started 3000');
+app.listen(PORT, () => {
+    console.log('Server started ' + PORT);
 });
